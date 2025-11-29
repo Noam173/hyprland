@@ -1,2 +1,2 @@
-So the .py version is  precomiled and need to be run (its got a python shabeng line) along side to '/stuff'
+main.py has a shbeng line (#!/usr/bin/env python) and the neccesary permissions so it can be run ./main.py
 
