@@ -1,0 +1,41 @@
+* {
+    border: none;
+    padding: 0 6px;
+    margin-top: 2px;
+    font-family: "MesloLGS Nerd Font", monospace;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+}
+
+#window,
+#tray,
+#clock {
+    background: transparent;
+}
+
+#tray {
+    margin-right: -5px;
+}
+
+#tray * {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#tray menu {
+    padding: 5px 0;
+    margin: 0;
+    border: 1px solid #555;
+}
+
+#tray menu menuitem {
+    padding: 4px 12px;
+}
+
+#tray menu menuitem:hover {
+    background: rgba(66, 165, 245, 0.25);
+}
