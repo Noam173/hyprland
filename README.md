@@ -2,7 +2,7 @@
 
 # main.py has a shbeng line (#!/usr/bin/env python) and the neccesary permissions so it can be run ./main.py
 
-# run:
+# for compiled onefile version please run:
 
 cd $(find $HOME -name "hyprland_setup")
 
