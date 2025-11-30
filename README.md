@@ -4,7 +4,7 @@
 
 # run:
 
-cd $(find $HOME -name "hyprland_setup")
+cd $(find $HOME -name "hyprland")
 
 uvx pyinstaller hyprland_setup.py \
  --add-data "stuff:stuff" \
