@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
+
+cwd="$PWD"
+
 neccesary() {
     sudo chown -R $USER:$USER ~/.config
     paru -S nano uv waybar firefox --noconfirm
 
     paru -S pipewire-pulse pavucontrol --noconfirm
     sudo systemctl enable pipewire-pulse --now
-    scripts
 }
 
 check() {
@@ -22,7 +24,6 @@ scripts() {
     for script in $files;do
     uv run "$script"
     done
-    echo "$files"
 }
 
 zed_install() {
@@ -44,6 +45,7 @@ clearSource() {
     path='./core/tabs/system-setup'
     cd "$path"
     . "$file_name"
+    cd "$cwd"
     if [[ -f "$HOME/.bashrc" ]]; then
     clear && source "$HOME/.bashrc"
     fi
@@ -56,11 +58,13 @@ paru_install() {
     path="$HOME/tmp/core/tabs/system-setup/arch/"
     cd "$path"
     . "$file_name"
+    cd "$cwd"
 }
 
 
 paru_install
 neccesary
+scripts
 git_cred
 zed_install
 clearSource
